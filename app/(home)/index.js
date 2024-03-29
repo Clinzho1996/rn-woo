@@ -15,6 +15,7 @@ import { Octicons, Ionicons } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 import Carousel from "../../components/Carousel";
 import Categories from "../../components/Categories";
+import Hotel from "../../components/Hotel";
 
 const index = () => {
   const [locationServicesEnabled, setLocationServicesEnabled] = useState(false);
@@ -673,8 +674,8 @@ const index = () => {
       </Text>
 
       <View style={{ marginHorizontal: 8 }}>
-        {data?.map((item, index) => (
-          <Hotel key={index} item={item} menu={item?.menu} />
+        {hotels?.map((hotel, index) => (
+          <Hotel key={index} item={hotel} menu={hotel?.menu} />
         ))}
       </View>
     </ScrollView>
